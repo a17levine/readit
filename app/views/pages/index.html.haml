@@ -1,0 +1,5 @@
+%h1 I'm a webapp!!!!!!!!
+
+%ul
+	- @links.each do |link|
+		%li= link_to link.title, link.url
