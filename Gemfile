@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'haml'
 gem 'will_paginate'
+gem 'better_errors'
 
 
 # Gems used only for assets and not required
