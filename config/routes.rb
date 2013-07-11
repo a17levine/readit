@@ -61,5 +61,9 @@ Readit::Application.routes.draw do
   resources :pages
   resources :links
 
+  resources :links do
+    resources :comments
+  end
+
   root to: "pages#index"
 end

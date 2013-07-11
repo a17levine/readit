@@ -1,6 +1,7 @@
 class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
+    @comment = @link.comments.build
   end
 
   def new
@@ -8,7 +9,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(params[:link])
+    @link = current_user.links.build(params[:link])
 
     if @link.save
       redirect_to @link
